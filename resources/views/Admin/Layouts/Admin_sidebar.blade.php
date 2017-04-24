@@ -37,8 +37,8 @@
                   
         <li><a><i class="fa fa-user"></i> Manage Employee <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="#">Employee Personal Information</a></li>
-                <li><a href="#">Active Employee Information</a></li>
+                <li><a href="{{route('allemployeeInfo')}}">Employee Personal Information</a></li>
+                <li><a href="{{route('activeuserInfo')}}">Active Employee Information</a></li>
                 <li><a href="{{route('addEmployee')}}">Add New Employee</a></li>
                 <li><a href="{{route('addUser')}}">Create New User</a></li>
             </ul>
@@ -99,8 +99,8 @@
 
         <li><a><i class="fa fa-image"></i>Event Management<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="#">Show All Event</a></li>
-                <li><a href="#">Add Event</a></li>
+                <li><a href="{{route('showalleventsView')}}">Show All Event</a></li>
+                <li><a href="{{route('addeventView')}}">Add Event</a></li>
             </ul>
         </li>
 

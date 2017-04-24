@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html class=" " lang="en"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tier5</title>
+
+    <!-- Bootstrap -->
+    <link href="Tier5_files/bootstrap.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="Tier5_files/font-awesome.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="Tier5_files/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="Tier5_files/green.css" rel="stylesheet">
+	
+    <!-- bootstrap-progressbar -->
+    <link href="Tier5_files/bootstrap-progressbar-3.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="Tier5_files/jqvmap.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="Tier5_files/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="Tier5_files/custom.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="Tier5_files/jquery_009.js"></script>
+
+      <style type="text/css">
+
+    .modal-backdrop.in
+    {
+        display:none;
+    }
+    
+    .modal-dialog
+    {
+          width:450px;
+          margin:20px auto;
+          position:fixed;
+          top:17%;
+          left:40%;
+ 
+    }
+
+    .td-inactive-input
+    {
+         width:100%;
+         padding-top: 10px;
+         padding-bottom: 10px;
+    }
+
+    .modal-dialog1
+    {
+          width:250px;
+          margin:20px auto;
+          position:fixed;
+          top:20%;
+          left:65%;
+ 
+    }
+
+    .edit-emp-details-input
+    {
+         width:100%;
+         padding-top: 8px;
+         padding-bottom: 8px;
+
+    }
+
+    .td-edit-emp-details-input
+    {
+         
+         width:70%;
+         padding-left: 10px;
+         padding-right: 10px;
+         padding-top: 5px;
+         padding-bottom: 5px;
+
+    }
+    .pass-table
+    {
+         width:100%;
+         padding-bottom: 15px;
+    }
+    .pass-table-input
+    {
+         width:80%;
+         padding-left: 15px;
+         padding-right: 15px;
+         padding-top: 10px;
+         padding-bottom: 10px;
+    }
+
+    .imp
+    {
+      color:red; 
+    }
+
+    .td-edit-emp-details
+    {
+         padding-left: 10px;
+         padding-right: 10px;
+         padding-top: 15px;
+         padding-bottom: 15px;
+    }
+
+    
+   </style>
+
+  </head>
+
+  <body style="padding-right: 16px;" class="nav-md modal-open">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+            
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+           
+                                          <div class="profile_pic">
+                <img src="Tier5_files/user-male.png" class="img-circle profile_img">
+              </div>
+                            
+                <div class="profile_info">
+                <span>Welcome,</span>
+                                <h2>jon</h2>
+                                </div>
+             <hr>
+            </div>
+           
+            <!-- /menu profile quick info -->
+
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+        <div class="menu_section active">
+               
+               <ul style="" class="nav side-menu">
+        <li><a href="#"><i class="fa fa-home"></i> Home </a></li>
+                  
+        <li class="active"><a><i class="fa fa-user"></i> Manage Employee <span class="fa fa-chevron-down"></span></a>
+            <ul style="display: block;" class="nav child_menu">
+                <li><a href="http://dev.tier5.in/admin/allemployeedetails">Employee Personal Information</a></li>
+                <li class="current-page"><a href="http://dev.tier5.in/admin/activeuserinfo">Active Employee Information</a></li>
+                <li><a href="http://dev.tier5.in/admin/addemployee">Add New Employee</a></li>
+                <li><a href="http://dev.tier5.in/admin/adduser">Create New User</a></li>
+            </ul>
+        </li>
+
+                             <li><a><i class="fa fa-child"></i>Manage IOT<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="#">Call A Employee</a></li>
+                    <li><a href="#">Manage Devices</a></li>
+                </ul>
+            </li>
+                          <li><a><i class="fa fa-child"></i>Employee Activity<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+                <li><a href="#">Daily Activity</a></li>
+                <li><a href="#">Employee Late/Absent</a></li>
+                <li><a href="#">Employee Productivity</a></li>
+                <li><a href="#">View Employee Productivity</a></li>
+            </ul>
+        </li>
+
+                
+        <li><a><i class="fa fa-briefcase"></i>Manage Finance<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+                <li><a href="#">Balance Sheet</a></li>
+                <li><a href="#">Manage Cost</a></li>
+                <li><a href="#">Graph Balance Sheet</a></li>      
+            </ul>
+        </li> 
+
+
+                    
+        <li><a><i class="fa fa-flag"></i> Manage Facility <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+                <li><a href="#">Manage Break</a></li>
+                <li><a href="#">Manage Clock In/Clock Out Time</a></li>
+            </ul>
+        </li>
+       
+                           
+        <li><a><i class="fa fa-cutlery"></i>Lunch Program <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+                <li><a href="#">Lunch Order</a></li>
+                <li><a href="#">Expendature For Lunch Program</a></li>
+                <li><a href="#">Place Lunch Order In Behalf Of An Employee</a></li>
+                <li><a href="#">Add New Shop/Item</a></li>
+                <li><a href="#">Add/Deduct Lunch Bonus</a></li>
+                <li><a href="#">Disable Lunch Facility</a></li>
+            </ul>
+        </li>
+
+        <li><a><i class="fa fa-image"></i>Event Management<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+                <li><a href="#">Show All Event</a></li>
+                <li><a href="#">Add Event</a></li>
+            </ul>
+        </li>
+
+        <li><a><i class="fa fa-check-square-o"></i>Attendance Bonus<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+                <li><a href="#">Expandeture On Attendance</a></li>
+                <li><a href="#">Point History</a></li>
+                <li><a href="#">Point Add/Deduct</a></li>
+            </ul>
+        </li>
+          
+        <li><a><i class="fa fa-newspaper-o"></i>Manage Notice Board<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+                <li><a href="#">Show All Notice</a></li>
+                <li><a href="#">Add New Notice</a></li>
+            </ul>
+        </li>
+
+        <li><a><i class="fa fa-thumbs-o-up"></i>Employee Of The Month<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+                <li><a href="#">Manage Employee Of The Month</a></li>        
+            </ul>
+        </li>
+
+        <li><a><i class="fa fa-smile-o"></i>Holiday Management<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+                <li><a href="#">All Holidays</a></li>
+                <li><a href="#">Add Holiday</a></li>
+                <li><a href="#">Special Holiday</a></li>        
+            </ul>
+        </li>
+
+        <li><a><i class="fa fa-tags"></i>Log Book<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+                <li><a href="#">See Point Deduct/Add Activity</a></li>
+            </ul>
+        </li>
+
+                        <li><a><i class="fa fa-comment"></i>Chat<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+                <li><a href="#">See Chat History</a></li>
+            </ul>
+        </li>
+
+        <li><a><i class="fa fa-hand-o-right"></i>BDM Activity<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+                <li><a href="#">Proposals Submitted By BDM</a></li>
+                <li><a href="#">View BDM Monthly Activity</a></li>
+            </ul>
+        </li>
+
+        <li><a><i class="fa fa-trophy"></i>Badges<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+                <li><a href="#">Manage Badges</a></li>
+            </ul>
+        </li>
+                              </ul>
+
+            </div>
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-original-title="Logout" data-toggle="tooltip" data-placement="top" title="" href="http://dev.tier5.in/admin/logout" style="width:100%">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->           </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+                            <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                      <img src="Tier5_files/user-male.png" alt="">jon
+                                      <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;">Change Password</a></li>
+                    <li><a href="http://dev.tier5.in/admin/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+                
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-green">6</span>
+                  </a>
+                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <li>
+                      <a>
+                        <span class="image"><img alt="Profile Image"></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img alt="Profile Image"></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img alt="Profile Image"></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img alt="Profile Image"></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="text-center">
+                        <a>
+                          <strong>See All Alerts</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+        <!-- page content -->
+        <div style="min-height: 1050.25px;" class="right_col" role="main">
+          <div class="row">
+ <div class="col-md-12 col-sm-12 col-xs-12">
+   <div class="x_panel">
+            
+      <div class="x_content">
+
+                   
+          <div id="msg"></div>
+              <div class="table-responsive">
+                <table class="table table-striped jambo_table bulk_action">
+                  <thead>
+                    <tr class="headings">
+                        <th class="column-title">Name</th>
+                        <th class="column-title">User Name</th>
+                        <th class="column-title">Role</th>
+                        <th class="column-title">Billable / Non-Billable</th>
+                              
+                                                                        <th class="column-title">Manage Badges</th>
+                                                                        <th class="column-title">Edit</th>
+                        <th class="column-title">Change Working Status</th>
+                            
+                    </tr>
+                  </thead>
+                         
+                  <tbody>
+                                                        <tr>  
+                      <td>Bhaskar</td>
+                      <td>Bhaskar</td>
+
+                                            <td>Developer</td>
+                       
+                                            <td>Billable</td>
+                                                   
+
+                                                                          <td>
+                          <button class="btn btn-primary btn-xs" onclick="location.href='#'">Change Badges</button>
+                          </td>
+                                                
+                      <td><button class="btn btn-success btn-xs glyphicon  glyphicon-edit" data-toggle="modal" data-target="#edit-employee_details" onclick="editempdetails(3)"></button></td>
+                          
+                      <td><input class="btn btn-success btn-xs" onclick="change_work_status()" data-toggle="modal" data-target="#inactive" value="Make Inactive" type="button">
+                      </td>
+                    </tr>
+                                          
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+              <!-- Modal -->
+                <div id="inactive" class="modal" role="dialog">
+                  <div class="modal-dialog1">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Change Working Status....</h4>
+                      </div>
+                      <div class="modal-body">
+                        <table>
+                          <tbody>
+                            <tr class="tr-inactive-details"><td class="td-edit-emp-details-lebel">
+                            <input id="empid" name="empid" style="display:none" type="text">
+                            <textarea class="td-inactive-input" id="reason" name="reason" placeholder="Describe Reason"></textarea>
+                            </td></tr>
+                            <tr class="tr-inactive-details"><td class="td-edit-emp-details-lebel">
+                            <input placeholder="Select The Date" class="datepicker" id="datepicker" name="datepicker" style="width:100%; padding-top:10px; padding-bottom: 10px;" type="text">
+                            </td></tr>
+                            <tr class="tr-inactive-details"><td class="td-edit-emp-details-lebel">
+                            <input class="btn btn-success btn-xs" onclick="change_work()" id="click_btn" value="Save" type="submit"><button type="button" class="close" data-dismiss="modal">×</button>
+                            </td></tr>
+                          </tbody>
+                       </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+              <div style="padding-right: 16px; display: block;" id="edit-employee_details" class="modal fade in" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Edit User Details</h4>
+                      </div>
+                      <div class="modal-body">
+                          <form method="post" action="admin_control/Action/editempdetails">
+                            <table>
+                                  <input value="3" id="details_id" name="details_id" type="hidden">
+                                  <tbody><tr class="tr-edit-emp-details"><td class="td-edit-emp-details-lebel">User  Name<span class="imp">*</span>:</td><td class="td-edit-emp-details-input"><input value="Bhaskar" class="edit-emp-details-input" name="user_name" id="user_name" required="required" type="text"></td></tr>
+                                  <tr class="tr-edit-emp-details"><td class="td-edit-emp-details-lebel">Change Role<span class="imp">*</span>:</td><td class="td-edit-emp-details-input"><select class="edit-emp-details-input" id="edit_role" name="edit_role" required=""><option value="">--Select--</option><option value="0">Super Admin</option><option value="1">HR</option><option selected="selected" value="2">Developer</option><option value="3">BDM</option></select></td></tr>
+                                  <tr class="tr-edit-emp-details"><td class="td-edit-emp-details-lebel">Change Availability<span class="imp">*</span>:</td><td class="td-edit-emp-details-input"><select class="edit-emp-details-input" id="edit_available" name="edit_available" required=""><option value="">--Select--</option><option selected="selected" value="1">Billable</option><option value="2">Non-Billable</option></select></td></tr>
+                                  <tr class="tr-edit-emp-details"><td class="td-emp-details-modal-lebel"><input value="Save" class="btn btn-success btn-md" type="submit"></td><td></td></tr>
+                            </tbody></table>
+                          </form>
+                          <hr>
+                          
+                            
+                        <div class="panel panel-default">
+                          <div class="panel-heading" role="tab" id="headingOne">
+                              <h4 class="panel-title">
+                                <a id="password_confirmation" onclick="hideadminpass()" role="button" align="right" data-toggle="collapse" data-parent="#accordion" href="#password" aria-expanded="true" aria-controls="collapseOne">
+                                 Reset Password For The User <i align="right" class="fa fa-caret-down"></i>
+                                </a>
+                            </h4>
+                        </div>
+                        <div aria-expanded="true" style="" id="password" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                              <form method="post" action="admin_control/Action/resetpassword">
+                                <input value="3" id="employee_id" name="employee_id" type="hidden">
+                                <table id="pass-table">
+                                    <tbody><tr><td class="pass-table">Password<span class="imp">*</span>:</td><td class="pass-table"><input id="edit_password" name="edit_password" required="" type="password"></td></tr>
+                                     <tr><td class="pass-table">Confirm Password<span class="imp">*</span>:</td><td class="pass-table"><input id="confirm_password" name="confirm_password" required="" type="password"></td></tr>
+                                      <tr id="admin_password_row" style="display: none;"><td class="pass-table">Admin Password<span class="imp">*</span>:</td><td class="pass-table"><input id="admin_password" name="admin_password" required="" type="password"></td></tr>
+                                    <tr><td class="pass-table"><input class="pass-table-input" value="Change Password" type="submit"></td><td class="pass-table"></td></tr>
+                                </tbody></table>
+                             </form>
+                            </div>
+                        </div>
+                        </div>
+
+                          </div> 
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+
+  <div class="modal fade" id="baddge">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title">Disable/Enable Badges For <span id="names"></span></h4>
+      </div>
+      <div class="modal-body">
+        <div id="msg"></div>
+        <div class="col-md-6 col-sm-6 col-lg-12" style="background:#73879c; color:white">
+          <h1>Disable badges</h1>
+          <br>
+         <strong> Cross The Box To Make Badges Disable For Employee And Uncross For Make It Enable </strong>
+          <div id="modal_display">
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-lg-12" style="background:#73879c; color:white">
+         <h1>Enable badges</h1>
+          <br>
+         <strong> Check The Box To Make Badges Enable For Employee And Uncheck For Make It Disable </strong>
+          <div id="enable">
+
+          </div>
+        </div>
+
+      </div>
+      <br>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</div>
+        </div>
+        <!-- /page content -->
+
+       <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Copyright © 2017 Tier5. All Rights Reserved
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->      </div>
+   
+    
+    
+    <!-- Bootstrap -->
+    <script src="Tier5_files/bootstrap.js"></script>
+    
+    <!-- FastClick -->
+    <script src="Tier5_files/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="Tier5_files/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="Tier5_files/Chart.js"></script>
+    <!-- gauge.js -->
+    <script src="Tier5_files/gauge.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="Tier5_files/bootstrap-progressbar.js"></script>
+    <!-- iCheck -->
+    <script src="Tier5_files/icheck.js"></script>
+    <!-- Skycons -->
+    <script src="Tier5_files/skycons.js"></script>
+    <!-- Flot -->
+    <script src="Tier5_files/jquery_008.js"></script>
+    <script src="Tier5_files/jquery_003.js"></script>
+    <script src="Tier5_files/jquery_010.js"></script>
+    <script src="Tier5_files/jquery_005.js"></script>
+    <script src="Tier5_files/jquery_002.js"></script>
+    <!-- Flot plugins -->
+    <script src="Tier5_files/jquery_004.js"></script>
+    <script src="Tier5_files/jquery_007.js"></script>
+    <script src="Tier5_files/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="Tier5_files/date.js"></script>
+    <!-- JQVMap -->
+    <script src="Tier5_files/jquery_006.js"></script>
+    <script src="Tier5_files/jquery.js"></script>
+    <script src="Tier5_files/jquery_011.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="Tier5_files/moment.js"></script>
+    <script src="Tier5_files/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="Tier5_files/custom.js"></script>
+	
+    
+<script type="text/javascript">
+function editempdetails(employee_id)
+{
+  try{
+      if(employee_id){
+        $.ajax({
+            type : 'post',
+            url : "http://dev.tier5.in/admin/editactiveemployeedetails",
+            data : {employee_id:employee_id, _token:"mIfZlaljtuhxe8OKDoTwtLAQfrigjnR6gziygdLp"},
+            success : function(response)
+            {   
+              console.log(response);
+              if(response!='error')
+              {
+                var data = JSON.parse(response);
+                $('#user_name').val(data.user_name);
+                $('#edit_role').val(data.role);
+                $('#edit_available').val(data.available);
+                $('#details_id').val(data.id);
+                $('#employee_id').val(data.id)
+              }
+            }
+        });
+      }
+      else
+      {
+        alert('Employee Not Found!');
+      }
+    }
+    catch(err)
+    {
+      alert(err.message);
+    }
+}
+
+$( '#edit_password' ).keyup(function(){
+    var content = false;
+    $( '#edit_password' ).each(function(){
+        if( $( this ).val() != '' )
+            {
+              $( '#confirm_password' ).each(function(){
+                if( $( this ).val() != '' )
+                  {
+                     content = true;
+                  }
+                });
+            }
+         });
+  
+
+    if( content )
+        $( '#admin_password_row' ).show();
+    else
+        $( '#admin_password_row').hide();
+  });
+
+
+function showadminpasswordfield()
+{
+
+  if ($('#edit_password').val() != "" && $('#confirm_password').val() != "")
+  {
+    $('#admin_password_row').show();
+  }
+   if ($('#edit_password').val().length == 0 && $('#confirm_password').val().length == 0)
+  {
+    $('#admin_password_row').hide();
+  }
+}
+
+function hideadminpass()
+{
+  if($('#password_confirmation').attr('aria-expanded','false') && $('#edit_password').val().length == 0 && $('#confirm_password').val().length == 0)
+  {
+     $('#admin_password_row').hide();
+  }
+}
+
+
+   
+
+</script>
+
+  
+<div class="modal-backdrop fade in"></div></body></html>

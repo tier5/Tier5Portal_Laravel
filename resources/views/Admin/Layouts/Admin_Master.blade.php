@@ -24,7 +24,8 @@
     <link href="/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
     <link href="/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="/css/sweet-alert.css">
+    <link href="/css/jquery-ui.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="/build/css/custom.min.css" rel="stylesheet">
     <!-- jQuery -->
@@ -90,9 +91,11 @@
     <!-- bootstrap-daterangepicker -->
     <script src="/vendors/moment/min/moment.min.js"></script>
     <script src="/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-
+    <script src="/js/sweet-alert.min.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="/build/js/custom.min.js"></script>
+    <script src="/js/jquery-ui.js"></script>
+
 	
     @yield('jquery')
   </body>

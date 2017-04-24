@@ -15,6 +15,7 @@ class CreateEmployeesTable extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned()->unique()->nullable();
             $table->string('name');
             $table->text('address');
             $table->string('gender');
@@ -34,8 +35,10 @@ class CreateEmployeesTable extends Migration
             $table->text('particle_id')->nullable();
             $table->text('access_token')->nullable();
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
-     DB::update("ALTER TABLE employees AUTO_INCREMENT = 1101;");
+
+        DB::update("ALTER TABLE employees AUTO_INCREMENT = 1100;");
     }
 
     /**
