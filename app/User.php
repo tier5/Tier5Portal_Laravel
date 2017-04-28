@@ -31,4 +31,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Employee::class);
     }
+
+    public function attendence_logs()
+    {
+        return $this->hasMany(AttendenceLog::class);
+    }
 }

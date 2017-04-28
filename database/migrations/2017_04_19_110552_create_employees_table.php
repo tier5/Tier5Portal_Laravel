@@ -24,7 +24,7 @@ class CreateEmployeesTable extends Migration
             $table->string('email')->unique()->nullable();
             $table->date('joining_date');
             $table->date('dob');
-            $table->string('activation_status')->comment="0->Active,1->Inactive,2->Pending";
+            $table->string('activation_status')->comment="0->Active,1->Inactive,2->Pending,3->Half_Complete";
             $table->string('company_email')->unique()->nullable();
             $table->text('designation')->nullable();
             $table->string('salary')->nullable();

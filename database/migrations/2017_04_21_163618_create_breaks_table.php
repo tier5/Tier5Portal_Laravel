@@ -17,7 +17,7 @@ class CreateBreaksTable extends Migration
             $table->increments('id');
             $table->string('break_name');
             $table->time('duration');
-            $table->string('status')->comment="1->Active,0->Inactive";
+            $table->string('status')->comment="0->Inactive,1->Active";
             $table->timestamps();
         });
     }

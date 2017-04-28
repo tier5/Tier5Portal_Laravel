@@ -15,4 +15,13 @@ class Employee extends Model
   	{
   		return $this->hasMany(Event::class);
   	}
+
+  	public function eoms()
+  	{
+  		return $this->hasMany(EmployeeOfTheMonth::class);
+  	}
+    public function holidays()
+    {
+      return $this->hasMany(Holiday::class);
+    }
 }

@@ -171,7 +171,7 @@
             </div>
           </div>
         </div>
-
+      </div>
 
               <!-- Modal -->
                 <div id="inactive" class="modal" role="dialog">
@@ -260,7 +260,7 @@
                       </div>
                     </div>
                   </div>
-              </div>
+        
 
 
   <div class="modal fade" id="baddge">
@@ -300,7 +300,7 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-</div>
+
 @endsection
 
 

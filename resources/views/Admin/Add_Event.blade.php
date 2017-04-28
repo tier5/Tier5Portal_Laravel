@@ -23,9 +23,9 @@
 
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
+              <center><h2>Add Event</h2></center>
                 <div class="x_content">   
-                    <div class="table-responsive">
-                        <h2>Add Event</h2>
+                    <div class="table-responsive">          
                         <table class="table table-striped jambo_table bulk_action">
                         <thead>
                           <tr class="headings">
@@ -43,7 +43,7 @@
                            <form method="post" action="{{route('addEvent')}}">
                             {{csrf_field()}}
                               <td>
-                                  <select id="emp_name" name="name" onselect="hidedivname()" >
+                                  <select id="emp_name" name="name" onselect="hidedivname()" required>
                                     <option value="">--Select--</option>
                                     @if(isset($employees))
                                     @foreach($employees as $employee)
@@ -101,7 +101,7 @@
       $('#Success_Message').hide();
       $('#Error_Message').hide();
     }
-     function hidedivname()
+     function hidedivevent()
     {
       $('#newevent_error').hide();
       $('#Success_Message').hide();

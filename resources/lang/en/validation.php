@@ -86,6 +86,7 @@ return [
     'uploaded'             => 'The :attribute failed to upload.',
     'url'                  => 'The :attribute format is invalid.',
     "phone" => "The :attribute field contains an invalid number.",
+    "month_year" => "The :attribute can only be entered as month year value like Jan 2015",
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines

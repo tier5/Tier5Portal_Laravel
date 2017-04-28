@@ -22,6 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('role')->comment="0->SuperAdmin,1->HR,2->Developer,3->BDM";
             $table->string('available')->comment="1->Available,2->Unavailable";
             $table->string('online_status')->comment="0->Offline,1->Online";
+            $table->integer('attendence_points')->nullable();
+            $table->integer('lunch_bonus')->nullable();
             $table->rememberToken();
             $table->timestamps();
 

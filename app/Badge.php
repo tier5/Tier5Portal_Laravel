@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Break extends Model
+class Badge extends Model
 {
     //
 }

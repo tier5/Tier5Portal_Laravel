@@ -15,8 +15,10 @@ class CreateProductionTimesTable extends Migration
     {
         Schema::create('production_times', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('action');
-            $table->time('time');
+            $table->string('shifts');
+            $table->time('clock_in');
+            $table->time('clock_out');
+            $table->string('status')->comment="0->Inactive,1->Active";
             $table->timestamps();
         });
     }

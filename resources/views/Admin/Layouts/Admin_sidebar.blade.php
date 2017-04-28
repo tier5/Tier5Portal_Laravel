@@ -78,8 +78,8 @@
                     
         <li><a><i class="fa fa-flag"></i> Manage Facility <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="#">Manage Break</a></li>
-                <li><a href="#">Manage Clock In/Clock Out Time</a></li>
+                <li><a href="{{route('manageBreak')}}">Manage Break</a></li>
+                <li><a href="{{route('manageclockinclockoutView')}}">Manage Clock In/Clock Out Time</a></li>
             </ul>
         </li>
        
@@ -89,7 +89,7 @@
         <li><a><i class="fa fa-cutlery"></i>Lunch Program <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
                 <li><a href="#">Lunch Order</a></li>
-                <li><a href="#">Expendature For Lunch Program</a></li>
+                <li><a href="#">Expenditure For Lunch Program</a></li>
                 <li><a href="#">Place Lunch Order In Behalf Of An Employee</a></li>
                 <li><a href="#">Add New Shop/Item</a></li>
                 <li><a href="#">Add/Deduct Lunch Bonus</a></li>
@@ -106,30 +106,30 @@
 
         <li><a><i class="fa fa-check-square-o"></i>Attendance Bonus<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="#">Expandeture On Attendance</a></li>
-                <li><a href="#">Point History</a></li>
-                <li><a href="#">Point Add/Deduct</a></li>
+                <li><a href="{{route('expenditureonattendenceView')}}">Expenditure On Attendance</a></li>
+                <li><a href="{{route('pointshistoryView')}}">Point History</a></li>
+                <li><a href="{{route('adddeductpointsView')}}">Point Add/Deduct</a></li>
             </ul>
         </li>
           
         <li><a><i class="fa fa-newspaper-o"></i>Manage Notice Board<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="#">Show All Notice</a></li>
-                <li><a href="#">Add New Notice</a></li>
+                <li><a href="{{route('shownoticesView')}}">Show All Notice</a></li>
+                <li><a href="{{route('addnoticeView')}}">Add New Notice</a></li>
             </ul>
         </li>
 
         <li><a><i class="fa fa-thumbs-o-up"></i>Employee Of The Month<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="#">Manage Employee Of The Month</a></li>        
+                <li><a href="{{route('employeeofthemonthView')}}">Manage Employee Of The Month</a></li>        
             </ul>
         </li>
 
         <li><a><i class="fa fa-smile-o"></i>Holiday Management<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="#">All Holidays</a></li>
-                <li><a href="#">Add Holiday</a></li>
-                <li><a href="#">Special Holiday</a></li>        
+                <li><a href="{{route('showallholidayView')}}">All Holidays</a></li>
+                <li><a href="{{route('addholidayView')}}">Add Holiday</a></li>
+                <li><a href="{{route('specialholidayView')}}">Special Holiday</a></li>        
             </ul>
         </li>
 
@@ -156,7 +156,7 @@
 
         <li><a><i class="fa fa-trophy"></i>Badges<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="#">Manage Badges</a></li>
+                <li><a href="{{route('managebadgesView')}}">Manage Badges</a></li>
             </ul>
         </li>
         @endif

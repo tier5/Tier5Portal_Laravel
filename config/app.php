@@ -179,6 +179,7 @@ return [
 
         Propaganistas\LaravelPhone\LaravelPhoneServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Felixkiss\UniqueWithValidator\ServiceProvider::class,
     ],
 
     /*
